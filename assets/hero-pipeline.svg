@@ -1,0 +1,141 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" fill="none">
+  <defs>
+    <linearGradient id="cloud" x1="490" y1="126" x2="1514" y2="793" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0D2530" stop-opacity=".95"/>
+      <stop offset="1" stop-color="#091820" stop-opacity=".78"/>
+    </linearGradient>
+    <linearGradient id="glow" x1="438" y1="440" x2="1544" y2="440" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#62E2CB"/>
+      <stop offset=".53" stop-color="#70BFFF"/>
+      <stop offset="1" stop-color="#FFB267"/>
+    </linearGradient>
+    <linearGradient id="deploy" x1="1198" y1="428" x2="1505" y2="667" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#102B34"/>
+      <stop offset="1" stop-color="#101E2A"/>
+    </linearGradient>
+    <filter id="glow-soft" x="-30%" y="-30%" width="160%" height="160%" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="7" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M48 0H0V48" stroke="#8ECBD0" stroke-opacity=".065"/>
+    </pattern>
+    <marker id="arrow" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto">
+      <path d="M0 0L8 4L0 8" fill="none" stroke="#71D8C8" stroke-width="1.3"/>
+    </marker>
+  </defs>
+  <path d="M480 0H1600V900H480z" fill="url(#grid)" opacity=".8"/>
+  <circle cx="1134" cy="452" r="390" fill="#38AFA3" fill-opacity=".045"/>
+  <path d="M443 454H536M694 454H759M945 454H987M1172 454H1211" stroke="url(#glow)" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M443 454H536M694 454H759M945 454H987M1172 454H1211" stroke="url(#glow)" stroke-width="5" opacity=".18" filter="url(#glow-soft)"/>
+
+  <g opacity=".7">
+    <path d="M510 206C510 169 540 139 577 139H1449C1486 139 1516 169 1516 206V699C1516 736 1486 766 1449 766H577C540 766 510 736 510 699V206Z" fill="url(#cloud)" stroke="#5DB9B1" stroke-opacity=".49" stroke-width="1.5"/>
+    <path d="M529 207C529 180 551 158 578 158H1448C1475 158 1497 180 1497 207V698C1497 725 1475 747 1448 747H578C551 747 529 725 529 698V207Z" stroke="#90CEC8" stroke-opacity=".15" stroke-dasharray="3 9"/>
+  </g>
+  <text x="555" y="192" fill="#7DE2D2" font-family="monospace" font-size="12" letter-spacing="2">AWS CLOUD  /  SECURE DELIVERY PLATFORM</text>
+  <text x="1435" y="192" fill="#8BA7B1" font-family="monospace" font-size="9" text-anchor="end">REFERENCE ARCHITECTURE</text>
+
+  <g>
+    <rect x="544" y="387" width="150" height="134" rx="5" fill="#0D2631" stroke="#52C9B6" stroke-opacity=".68"/>
+    <rect x="558" y="401" width="24" height="24" rx="3" fill="#123942" stroke="#63D7C5" stroke-opacity=".6"/>
+    <path d="M564 408H576M564 413H576M564 418H571" stroke="#80E6D6" stroke-width="1.5" stroke-linecap="round"/>
+    <text x="558" y="452" fill="#78E1D1" font-family="monospace" font-size="10" letter-spacing="1">01 / SOURCE</text>
+    <text x="558" y="477" fill="#E4EFF1" font-family="sans-serif" font-size="18" font-weight="700">Git commit</text>
+    <text x="558" y="499" fill="#9FB3BC" font-family="sans-serif" font-size="12">reviewed change</text>
+    <circle cx="681" cy="404" r="4" fill="#66E1CC" filter="url(#glow-soft)"/>
+  </g>
+
+  <g>
+    <rect x="767" y="357" width="178" height="194" rx="5" fill="#0E2531" stroke="#5AAED3" stroke-opacity=".68"/>
+    <rect x="782" y="372" width="24" height="24" rx="3" fill="#123247" stroke="#74C7F0" stroke-opacity=".68"/>
+    <path d="M789 378L796 384L789 390M798 391H801" stroke="#9BDFFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="782" y="423" fill="#8ED4F2" font-family="monospace" font-size="10" letter-spacing="1">02 / CI / CD PIPELINE</text>
+    <text x="782" y="440" fill="#9BBFCA" font-family="monospace" font-size="7.5">CODEPIPELINE · JENKINS · GITHUB ACTIONS</text>
+    <text x="782" y="461" fill="#E4EFF1" font-family="sans-serif" font-size="17" font-weight="700">Build &amp; validate</text>
+    <path d="M782 477H930" stroke="#37545F"/>
+    <circle cx="790" cy="496" r="3" fill="#70DFBB"/><text x="801" y="500" fill="#B6C7CD" font-family="sans-serif" font-size="11">Tests + quality checks</text>
+    <circle cx="790" cy="518" r="3" fill="#83C5F2"/><text x="801" y="522" fill="#B6C7CD" font-family="sans-serif" font-size="11">Container image build</text>
+    <circle cx="790" cy="540" r="3" fill="#FFB267"/><text x="801" y="544" fill="#B6C7CD" font-family="sans-serif" font-size="11">Trivy security scan</text>
+  </g>
+
+  <g>
+    <rect x="995" y="387" width="177" height="134" rx="5" fill="#171F2C" stroke="#B4A2FA" stroke-opacity=".64"/>
+    <rect x="1010" y="401" width="24" height="24" rx="3" fill="#27243F" stroke="#B9A8FF" stroke-opacity=".68"/>
+    <path d="M1016 413L1020 417L1028 408" stroke="#C8BFFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="1010" y="452" fill="#C2B5FF" font-family="monospace" font-size="10" letter-spacing="1">03 / RELEASE GATE</text>
+    <text x="1010" y="478" fill="#E4EFF1" font-family="sans-serif" font-size="18" font-weight="700">Review &amp; approve</text>
+    <text x="1010" y="501" fill="#AFA9C9" font-family="sans-serif" font-size="11">protected promotion</text>
+    <circle cx="1158" cy="404" r="4" fill="#B7A7FF" filter="url(#glow-soft)"/>
+  </g>
+
+  <g>
+    <rect x="1218" y="357" width="171" height="194" rx="5" fill="#292318" stroke="#E7A95D" stroke-opacity=".76"/>
+    <rect x="1233" y="372" width="24" height="24" rx="3" fill="#382B1B" stroke="#E9AD64" stroke-opacity=".75"/>
+    <path d="M1239 379H1251V389H1239zM1239 382H1251" stroke="#FFD09A" stroke-width="1.3"/>
+    <text x="1233" y="423" fill="#FFC17F" font-family="monospace" font-size="10" letter-spacing="1">04 / IMAGE REGISTRY</text>
+    <text x="1233" y="450" fill="#F3E9DC" font-family="sans-serif" font-size="18" font-weight="700">Amazon ECR</text>
+    <path d="M1233 467H1374" stroke="#604A30"/>
+    <circle cx="1241" cy="488" r="3" fill="#FFB267"/><text x="1252" y="492" fill="#D5C4AC" font-family="sans-serif" font-size="11">Scan-approved image</text>
+    <circle cx="1241" cy="514" r="3" fill="#FFB267"/><text x="1252" y="518" fill="#D5C4AC" font-family="sans-serif" font-size="11">Immutable digest</text>
+  </g>
+
+  <g>
+    <rect x="1406" y="303" width="1" height="-1" fill="none"/>
+    <path d="M1418 454H1450" stroke="#FFB267" stroke-width="2" marker-end="url(#arrow)"/>
+  </g>
+  <g>
+    <rect x="1437" y="348" width="0" height="0" fill="none"/>
+    <rect x="1434" y="366" width="0" height="0" fill="none"/>
+  </g>
+
+  <g>
+    <rect x="1218" y="611" width="292" height="107" rx="5" fill="url(#deploy)" stroke="#64CFC0" stroke-opacity=".6"/>
+    <text x="1235" y="636" fill="#7DE2D2" font-family="monospace" font-size="10" letter-spacing="1">05 / AMAZON EKS  ·  MULTI-AZ</text>
+    <rect x="1235" y="653" width="121" height="47" rx="3" fill="#102C35" stroke="#59B9AC" stroke-opacity=".6"/>
+    <circle cx="1249" cy="668" r="3" fill="#70DFBB"/><text x="1259" y="672" fill="#D6E5E6" font-family="sans-serif" font-size="11">STAGING</text>
+    <text x="1247" y="690" fill="#8FA9B0" font-family="monospace" font-size="8">validate rollout</text>
+    <rect x="1370" y="653" width="122" height="47" rx="3" fill="#102C35" stroke="#E5A15C" stroke-opacity=".6"/>
+    <circle cx="1384" cy="668" r="3" fill="#FFB267"/><text x="1394" y="672" fill="#D6E5E6" font-family="sans-serif" font-size="11">PRODUCTION</text>
+    <text x="1382" y="690" fill="#8FA9B0" font-family="monospace" font-size="8">health-gated deploy</text>
+  </g>
+  <path d="M1304 552V592H1368V611" stroke="#E4AB68" stroke-opacity=".62" stroke-width="1.5" stroke-dasharray="4 5" marker-end="url(#arrow)"/>
+  <text x="1342" y="582" fill="#D6B17E" font-family="monospace" font-size="8" text-anchor="middle">PROMOTE</text>
+
+  <g>
+    <rect x="566" y="615" width="184" height="102" rx="5" fill="#10272C" stroke="#68C9B7" stroke-opacity=".54"/>
+    <text x="582" y="641" fill="#83DDCA" font-family="monospace" font-size="9" letter-spacing="1">INFRASTRUCTURE AS CODE</text>
+    <text x="582" y="667" fill="#E0ECEC" font-family="sans-serif" font-size="16" font-weight="700">Terraform</text>
+    <text x="582" y="691" fill="#9BB4B8" font-family="sans-serif" font-size="10">network · IAM · cluster</text>
+    <path d="M750 665H779V551" stroke="#66CCBB" stroke-opacity=".52" stroke-width="1.4" stroke-dasharray="4 5" marker-end="url(#arrow)"/>
+  </g>
+
+  <g>
+    <rect x="786" y="615" width="414" height="102" rx="5" fill="#0D222C" stroke="#548292" stroke-opacity=".58"/>
+    <text x="802" y="641" fill="#86C9D9" font-family="monospace" font-size="9" letter-spacing="1">SECURITY · AUDIT · COST VISIBILITY</text>
+    <rect x="802" y="654" width="89" height="42" rx="3" fill="#112C34" stroke="#42656B"/>
+    <text x="846" y="671" fill="#D7E4E5" font-family="sans-serif" font-size="9" text-anchor="middle">IAM · WAF</text>
+    <text x="846" y="686" fill="#8EAEB3" font-family="monospace" font-size="7" text-anchor="middle">GUARDDUTY</text>
+    <rect x="899" y="654" width="89" height="42" rx="3" fill="#112934" stroke="#42656B"/>
+    <text x="943" y="671" fill="#D7E4E5" font-family="sans-serif" font-size="9" text-anchor="middle">CLOUDTRAIL</text>
+    <text x="943" y="686" fill="#8EAEB3" font-family="monospace" font-size="7" text-anchor="middle">AUDIT EVENTS</text>
+    <rect x="996" y="654" width="89" height="42" rx="3" fill="#112934" stroke="#42656B"/>
+    <text x="1040" y="671" fill="#D7E4E5" font-family="sans-serif" font-size="9" text-anchor="middle">CLOUDWATCH</text>
+    <text x="1040" y="686" fill="#8EAEB3" font-family="monospace" font-size="7" text-anchor="middle">METRICS · ALERTS</text>
+    <rect x="1093" y="654" width="91" height="42" rx="3" fill="#25251C" stroke="#89764D"/>
+    <text x="1138" y="671" fill="#E8D7AC" font-family="sans-serif" font-size="9" text-anchor="middle">AWS BUDGETS</text>
+    <text x="1138" y="686" fill="#BBAE8D" font-family="monospace" font-size="7" text-anchor="middle">COST REVIEW</text>
+  </g>
+
+  <g>
+    <path d="M675 313V286H1340V343" stroke="#5BAFA7" stroke-opacity=".5" stroke-width="1.3" stroke-dasharray="4 6" marker-end="url(#arrow)"/>
+    <text x="1010" y="276" fill="#85BDBA" font-family="monospace" font-size="9" text-anchor="middle" letter-spacing="1">PROTECTED BRANCH · TEST · SCAN · APPROVAL · DEPLOY BY IMAGE DIGEST</text>
+    <circle cx="742" cy="286" r="3" fill="#69CBBB" filter="url(#glow-soft)"/>
+    <circle cx="1075" cy="286" r="3" fill="#83C6F1" filter="url(#glow-soft)"/>
+  </g>
+  <path d="M1190 718V744H747V717" stroke="#69C6B7" stroke-opacity=".26" stroke-width="1" stroke-dasharray="3 7"/>
+  <text x="956" y="740" fill="#708E97" font-family="monospace" font-size="8" text-anchor="middle">OBSERVE · LEARN · IMPROVE</text>
+  <circle cx="536" cy="454" r="5" fill="#6FE4D1" filter="url(#glow-soft)"/>
+  <circle cx="1210" cy="454" r="5" fill="#FFB267" filter="url(#glow-soft)"/>
+  <path d="M720 210L729 201M737 210L746 201M754 210L763 201M1451 805L1460 796M1468 805L1477 796M1485 805L1494 796" stroke="#63CFC1" stroke-opacity=".62" stroke-width="2" stroke-linecap="round"/>
+</svg>
